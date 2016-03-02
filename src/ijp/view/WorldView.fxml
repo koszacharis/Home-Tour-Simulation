@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="725.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ijp.controller.WorldController">
+	<children>
+		<ImageView fx:id="imageView" fitHeight="574.0" fitWidth="762.0" layoutY="29.0" pickOnBounds="true">
+			<viewport>
+				<Rectangle2D />
+			</viewport>
+		</ImageView>
+		<MenuBar fx:id="MenuBar" prefHeight="29.0" prefWidth="959.0">
+			<menus>
+				<Menu mnemonicParsing="false" text="File">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#exit" text="Close" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Pick">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#pickUpHelmet" text="Helmet" />
+						<MenuItem mnemonicParsing="false" onAction="#pickUpTree" text="Tree" />
+						<MenuItem mnemonicParsing="false" onAction="#pickUpGuitar" text="Guitar" />
+						<MenuItem mnemonicParsing="false" onAction="#pickUpBasket" text="Basket" />
+					</items>
+				</Menu>
+				<Menu mnemonicParsing="false" text="Drop">
+					<items>
+						<MenuItem mnemonicParsing="false" onAction="#dropHelmet" text="Helmet" />
+						<MenuItem mnemonicParsing="false" onAction="#dropTree" text="Tree" />
+						<MenuItem mnemonicParsing="false" onAction="#dropGuitar" text="Guitar" />
+						<MenuItem mnemonicParsing="false" onAction="#dropBasket" text="Basket" />
+					</items>
+				</Menu>
+			</menus>
+		</MenuBar>
+		<Button fx:id="buttonLeft" layoutX="312.0" layoutY="530.0" mnemonicParsing="false" onAction="#rotateLeft" prefHeight="50.0" prefWidth="50.0">
+			<graphic>
+				<ImageView fx:id="leftArrowView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+			</graphic>
+		</Button>
+		<Button fx:id="buttonRight" layoutX="382.0" layoutY="530.0" mnemonicParsing="false" onAction="#rotateRight" prefHeight="50.0" prefWidth="50.0">
+			<graphic>
+				<ImageView fx:id="rightArrowView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+			</graphic>
+		</Button>
+		<ImageView fx:id="helmetView" fitHeight="78.0" fitWidth="78.0" layoutX="519.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" />
+		<ImageView fx:id="treeView" fitHeight="78.0" fitWidth="78.0" layoutX="45.0" layoutY="281.0" pickOnBounds="true" />
+
+		<Button fx:id="buttonArrow" layoutX="347.0" layoutY="470.0" mnemonicParsing="false" onAction="#goForward" prefHeight="50.0" prefWidth="50.0">
+			<graphic>
+				<ImageView fx:id="arrowView" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+			</graphic>
+		</Button>
+		<ImageView fx:id="mapView" fitHeight="283.0" fitWidth="198.0" layoutX="762.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true" />
+		<ImageView fx:id="posView" fitHeight="17.0" fitWidth="12.0" layoutX="789" layoutY="272" pickOnBounds="true" />
+		<TextArea fx:id="output" layoutX="80.0" layoutY="604.0" prefHeight="121.0" prefWidth="614.0" wrapText="true" />
+		<ImageView fx:id="itemHolder1" fitHeight="78.0" fitWidth="78.0" layoutX="879.0" layoutY="336.0" pickOnBounds="true" />
+		<ImageView fx:id="itemHolder" fitHeight="78.0" fitWidth="78.0" layoutX="775.0" layoutY="333.0" pickOnBounds="true" />
+		<Button fx:id="buttonExit" layoutX="838.0" layoutY="634.0" mnemonicParsing="false" onAction="#exit" prefHeight="60.0" prefWidth="94.0">
+			<graphic>
+				<ImageView fx:id="exitView" fitHeight="51.0" fitWidth="88.0" pickOnBounds="true" preserveRatio="true" />
+			</graphic>
+		</Button>
+		<ImageView fx:id="itemHolder2" fitHeight="78.0" fitWidth="78.0" layoutX="861.0" layoutY="415.0" pickOnBounds="true" />
+		<ImageView fx:id="guitarView" fitHeight="78.0" fitWidth="78.0" layoutX="519.0" layoutY="406.0" pickOnBounds="true" />
+		<ImageView fx:id="itemHolder3" fitHeight="78.0" fitWidth="78.0" layoutX="780.0" layoutY="421.0" pickOnBounds="true" preserveRatio="true" />
+		<ImageView fx:id="basketView" fitHeight="78.0" fitWidth="78.0" layoutX="273.0" layoutY="359.0" pickOnBounds="true" />
+		<Button fx:id="randomButton" layoutX="720.0" layoutY="635.0" mnemonicParsing="false" onAction="#randomLocation" prefHeight="60.0" prefWidth="106.0">
+			<graphic>
+				<ImageView fx:id="randomView" fitHeight="49.0" fitWidth="92.0" pickOnBounds="true" preserveRatio="true" />
+			</graphic>
+		</Button>
+	</children>
+</AnchorPane>
